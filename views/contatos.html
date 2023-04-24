@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head lang="pt-br">
+    <meta charset="utf-8">
+    <title>Contatos</title>
+    <link rel="stylesheet" href="../static/styles.css">
+  </head>
+  <body>
+    <h1 class="titulo">Contatos</h1>  
+    <a href="/adicionar" class="botao-adicionar">Adicionar contato</a>  
+    <table class="tabela-contatos">
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>E-mail</th>
+        <th>Telefone</th>
+      </tr>
+      {% for resultado in resultados %}
+      <tr>
+        <td>{{ resultado.id }}</td>
+        <td>{{ resultado.nome }}</td>
+        <td>{{ resultado.email }}</td>
+        <td>{{ resultado.telefone }}</td>
+      </tr>
+      {% endfor %}
+    </table>    
+  </body>
+</html>

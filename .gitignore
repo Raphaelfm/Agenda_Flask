@@ -1,0 +1,14 @@
+# Arquivos binários do Python
+*.pyc
+*.pyo
+__pycache__/
+
+# Arquivos de lixo
+*.DS_Store
+*.swp
+
+# Arquivos de configuração
+/config.json
+
+# Exceção para o arquivo de configuração padrão
+!configDefault.json
