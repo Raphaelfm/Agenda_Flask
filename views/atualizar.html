@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Atualizar Contato</title>
+  <link rel="stylesheet" href="../static/atualizar.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Atualizar Contato</h1>
+    <form action="{{ url_for('contatosController.atualizar', id=contato.id) }}" method="post">
+      <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" value="{{ contato.nome }}" required>
+      </div>
+      <div class="form-group">
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" name="email" value="{{ contato.email }}" required>
+      </div>
+      <div class="form-group">
+        <label for="telefone">Telefone:</label>
+        <input type="text" id="telefone" name="telefone" value="{{ contato.telefone }}" class="telefone" required>
+      </div>
+      <div class="button-group">
+        <button type="submit" class="button">Atualizar</button>
+      </div>
+    </form>
+  </div>
+  <script>
+    $(document).ready(function(){
+      $('.telefone').mask('(99) 99999-9999');
+    });
+  </script>
+</body>
+</html>

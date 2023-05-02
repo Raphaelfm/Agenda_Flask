@@ -1,19 +1,21 @@
 <!DOCTYPE html>
-<html>
-  <head lang="pt-br">
-    <meta charset="utf-8">
-    <title>Contatos</title>
-    <link rel="stylesheet" href="../static/styles.css">
-  </head>
-  <body>
-    <h1 class="titulo">Contatos</h1>  
-    <a href="/adicionar" class="botao-adicionar">Adicionar contato</a>  
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Contatos</title>
+  <link rel="stylesheet" href="../static/contatos.css">
+</head>
+<body>
+  <div class="container">
+    <h1 class="title">Contatos</h1>
+    <a href="{{ url_for('contatosController.adicionar') }}" class="button">Adicionar Contato</a>
     <table class="tabela-contatos">
       <tr>
         <th>ID</th>
         <th>Nome</th>
         <th>E-mail</th>
         <th>Telefone</th>
+        <th>Ações</th>
       </tr>
       {% for resultado in resultados %}
       <tr>
@@ -21,8 +23,17 @@
         <td>{{ resultado.nome }}</td>
         <td>{{ resultado.email }}</td>
         <td>{{ resultado.telefone }}</td>
+        <td>
+          <div class="button-group">
+            <a href="{{ url_for('contatosController.atualizar', id=resultado.id) }}" class="button">Atualizar</a>
+            <form action="{{ url_for('contatosController.confirmar_exclusao', id=resultado.id) }}" method="get">
+              <button type="submit" class="button-excluir">Excluir</button>
+            </form>            
+          </div>
+        </td>                
       </tr>
       {% endfor %}
     </table>    
-  </body>
+  </div>
+</body>
 </html>

@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <title>Excluir Contato</title>
+  <link rel="stylesheet" href="../static/excluir.css">
+</head>
+<body>
+  <h1>Excluir Contato</h1>
+  <p>Deseja realmente excluir o contato?</p>
+  <!-- Use a variável 'id' passada pelo contexto -->
+  <form action="{{ url_for('contatosController.excluir', id=id) }}" method="post">
+    <button type="submit">Confirmar Exclusão</button>
+  </form>
+</body>
+</html>

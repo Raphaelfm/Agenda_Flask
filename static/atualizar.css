@@ -1,39 +1,4 @@
-.titulo {
-    font-size: 24px;
-    font-weight: bold;
-    text-align: center;
-  }
-  
-  .tabela-contatos {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-  
-  .tabela-contatos th, .tabela-contatos td {
-    padding: 10px;
-    border: 1px solid #ccc;
-  }
-  
-  .tabela-contatos th {
-    background-color: #f0f0f0;
-  }
-  
-  .botao-adicionar {
-    display: block;
-    width: 120px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 5px;
-    background-color: #008080;
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none;
-    margin-top: 20px;
-  }
-   
-  .container {
+.container {
     max-width: 500px;
     margin: 0 auto;
     padding: 20px;
@@ -72,9 +37,13 @@
     border-bottom-color: #007bff;
   }
   
+  .button-group {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+  }
+  
   .button {
-    display: block;
-    margin: 0 auto;
     padding: 10px 20px;
     font-size: 16px;
     border: none;

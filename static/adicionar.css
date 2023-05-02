@@ -1,0 +1,55 @@
+.container {
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.title {
+  text-align: center;
+  font-size: 28px;
+  margin-bottom: 30px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="email"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-bottom: 2px solid #ccc;
+  transition: border-bottom-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus {
+  outline: none;
+  border-bottom-color: #007bff;
+}
+
+.button {
+  display: block;
+  margin: 0 auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: #007bff;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.button:hover {
+  background-color: #0056b3;
+}
