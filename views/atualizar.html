@@ -27,8 +27,12 @@
     </form>
   </div>
   <script>
-    $(document).ready(function(){
-      $('.telefone').mask('(99) 99999-9999');
+    document.addEventListener('DOMContentLoaded', function() {
+      var telefoneInput = document.querySelector('.telefone');
+      telefoneInput.addEventListener('input', function() {
+        var telefone = this.value.replace(/\D/g, '');
+        this.value = telefone.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+      });
     });
   </script>
 </body>
