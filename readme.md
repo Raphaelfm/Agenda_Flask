@@ -1,7 +1,7 @@
 ### Fiz esse projeto para ajudar uma amiga que está em formação na mesma faculdade onde estudo, visando ajudar.
 ### Esse projeto é uma agenda telefônica web, desenvolvida com python com o framework flask.
 ### Tecnologias:
-Python, mysql, html5, css3.
+Python, mysql, oracle database, html5, css3.
 
 
 # Pacotes Necessários
@@ -13,9 +13,14 @@ pip install Flask
 ## mysql-connector-python
 pip install mysql-connector-python
 
+## oracle db connnector python
+pip install oracledb
+
+### Caso o comando anterior para instalar o oracledb falhe, execute:
+python -m pip install oracledb
 
 # Banco de Dados
-Crie um banco no mysql, no meu caso criei um banco chamado mydatebase:
+Crie um banco no mysql, ou no oracle database, no meu caso criei um banco chamado mydatebase:
 ## Comando para criar o banco de dados:
 create database mydatabase
 
